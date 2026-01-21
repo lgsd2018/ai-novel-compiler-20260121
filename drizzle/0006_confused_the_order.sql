@@ -1,0 +1,1 @@
+ALTER TABLE `tts_cache` MODIFY COLUMN `audioData` text NOT NULL;

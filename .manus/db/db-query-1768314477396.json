@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `speech_recognition_history` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `projectId` int,\n  `documentId` int,\n  `audioUrl` text,\n  `audioFormat` varchar(20) NOT NULL DEFAULT 'webm',\n  `audioDuration` int,\n  `transcript` text NOT NULL,\n  `language` varchar(10) NOT NULL DEFAULT 'zh',\n  `recognitionType` enum('file', 'streaming') NOT NULL DEFAULT 'file',\n  `confidence` decimal(5, 4),\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `speech_recognition_history_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3zd7KKV3aCyZgdH.root --database 5ucNQ9ErrXVmTm66kpxNh3 --execute CREATE TABLE IF NOT EXISTS `speech_recognition_history` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `projectId` int,\n  `documentId` int,\n  `audioUrl` text,\n  `audioFormat` varchar(20) NOT NULL DEFAULT 'webm',\n  `audioDuration` int,\n  `transcript` text NOT NULL,\n  `language` varchar(10) NOT NULL DEFAULT 'zh',\n  `recognitionType` enum('file', 'streaming') NOT NULL DEFAULT 'file',\n  `confidence` decimal(5, 4),\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `speech_recognition_history_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1687
+}

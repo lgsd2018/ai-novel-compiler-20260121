@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS ai_analysis_cache (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  content_hash VARCHAR(64) UNIQUE NOT NULL,\n  analysis_result JSON NOT NULL,\n  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  expires_at TIMESTAMP NOT NULL,\n  access_count INT DEFAULT 1,\n  INDEX idx_content_hash (content_hash),\n  INDEX idx_expires_at (expires_at)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3zd7KKV3aCyZgdH.root --database 5ucNQ9ErrXVmTm66kpxNh3 --execute CREATE TABLE IF NOT EXISTS ai_analysis_cache (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  content_hash VARCHAR(64) UNIQUE NOT NULL,\n  analysis_result JSON NOT NULL,\n  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  expires_at TIMESTAMP NOT NULL,\n  access_count INT DEFAULT 1,\n  INDEX idx_content_hash (content_hash),\n  INDEX idx_expires_at (expires_at)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1842
+}

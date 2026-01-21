@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `tts_cache` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `cacheKey` varchar(64) NOT NULL,\n  `audioData` longtext NOT NULL,\n  `format` varchar(10) NOT NULL DEFAULT 'mp3',\n  `duration` int,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `lastAccessedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `accessCount` int NOT NULL DEFAULT 1,\n  CONSTRAINT `tts_cache_id` PRIMARY KEY(`id`),\n  CONSTRAINT `tts_cache_cacheKey_unique` UNIQUE(`cacheKey`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3zd7KKV3aCyZgdH.root --database 5ucNQ9ErrXVmTm66kpxNh3 --execute CREATE TABLE IF NOT EXISTS `tts_cache` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `cacheKey` varchar(64) NOT NULL,\n  `audioData` longtext NOT NULL,\n  `format` varchar(10) NOT NULL DEFAULT 'mp3',\n  `duration` int,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `lastAccessedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `accessCount` int NOT NULL DEFAULT 1,\n  CONSTRAINT `tts_cache_id` PRIMARY KEY(`id`),\n  CONSTRAINT `tts_cache_cacheKey_unique` UNIQUE(`cacheKey`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1673
+}
